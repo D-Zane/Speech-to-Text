@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text Conversion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .upload-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .upload-btn:hover {
+            background-color: #0056b3;
+        }
+        #upload-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="mb-4">Speech-to-Text</h1>
+        <button id="show-upload-btn" class="upload-btn">Загрузить Аудио Файл</button>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="audio/*" required>
+            <button type="submit" class="upload-btn">Загрузить</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('show-upload-btn').addEventListener('click', function() {
+            document.getElementById('show-upload-btn').style.display = 'none';
+            document.getElementById('upload-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
