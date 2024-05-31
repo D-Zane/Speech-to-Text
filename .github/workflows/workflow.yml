@@ -4,8 +4,35 @@ on:
 jobs:
   load:
     runs-on: windows-latest
-    steps:                
-    - name: Checkout       
-      uses: actions/checkout@v4.1.6
-    - name: Dependencies
-      run:  pip install -r ./requirements.txt
+    steps:
+      - name: Checkout       
+        uses: actions/checkout@v4.1.6
+      - name: InstallConda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniconda-version: "latest"
+          channels: bioconda, conda-forge, defaults
+          use-only-tar-bz2: true 
+          auto-update-conda: true
+          auto-activate-base: true
+      - name: Install py36
+        run: |
+            set -x
+
+            echo "begin: PATH=$PATH;"
+
+            conda create -y --name py36 python=3.6
+
+            conda activate py36 || true
+            echo "after conda activate py36: PATH=$PATH;"
+            which py36 || true
+              
+            $CONDA/bin/activate py36 || true
+            echo "after CONDA/bin/activate py36: PATH=$PATH;"
+            which py36 || true
+              
+            export PATH="3/envs/py36/bin:$PATH"
+            echo "after export PATH=3/envs/py36/bin:PATH: PATH=$PATH;"
+            which py36 || true         
+      - name: Dependencies
+        run:  pip install -r ./requirements.txt
