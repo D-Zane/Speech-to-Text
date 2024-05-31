@@ -5,6 +5,11 @@
 * [Python 3.6](https://www.python.org/)
 * Mac or Linux environment (Мы используем Anaconda) (https://www.anaconda.com/download)
 
+**Содержание:**
+- [Установка необходимых библиотек](#Установка-необходимых-библиотек)
+- [Установка DeepSpeech-2](#Установка-DeepSpeech-2)
+- [Запуск Веб-Интерфейса](#Запуск-Веб-Интерфейса)
+
 ## Установка необходимых библиотек
 
 Воспользуемся requrements.txt для установки необходимых библиотек:
@@ -13,9 +18,9 @@
 pip install -r requirements.txt
 ```
 
-## Установка DeepSpeech-2
+## Установка DeepSpeech2
 
-Для установки DeepSpeech-2 скачайте репозиторий:
+Для установки DeepSpeech2 скачайте репозиторий:
 
 ```bash
 git clone https://github.com/cogmeta/DeepSpeech-2.git
