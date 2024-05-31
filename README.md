@@ -18,7 +18,7 @@ pip install -r requirements.txt
 Для установки DeepSpeech-2 скачайте репозиторий:
 
 ```bash
-https://github.com/cogmeta/DeepSpeech-2.git
+git clone https://github.com/cogmeta/DeepSpeech-2.git
 ```
 
 Для корректной работы DeepSpeech нужно установить предобученные модели:
