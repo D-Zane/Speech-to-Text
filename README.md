@@ -56,5 +56,7 @@ python backend/app.py
 http://127.0.0.1:5000/
 ```
 
+![Usage](images/image.gif)
+
 ### Авторы:
 Савенков Дмитрий, Дарья Лоткова МПИ-23-1-2
