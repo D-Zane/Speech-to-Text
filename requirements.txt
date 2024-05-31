@@ -5,6 +5,7 @@ numpy
 matplotlib
 scipy
 sox
+tensorflow==1.15.0
 paramiko >= 2.1
 python_speech_features
 pyxdg
@@ -15,4 +16,3 @@ tables
 attrdict
 setuptools
 Flask
-unittest
