@@ -8,4 +8,4 @@ jobs:
     - name: Checkout       
       uses: actions/checkout@v4.1.6
     - name: Dependencies
-      run:  pip install -r ./requirements.txt 
+      run:  pip install -r ./requirements.txt
